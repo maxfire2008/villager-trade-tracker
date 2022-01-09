@@ -13,7 +13,7 @@ cur.execute('''CREATE TABLE users
 (id type UNIQUE, otp, sql_privilege);''')
 
 cur.execute('''CREATE TABLE tokens
-(user_id type UNIQUE, token);''')
+(user_id, token type UNIQUE);''')
 
 if input('''Include Testing Data?
 WARNING: POTENTIALLY DANGEROUS
