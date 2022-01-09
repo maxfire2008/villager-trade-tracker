@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/login-submit">
+	<label for="username">Username:</label><br>
+	<input type="text" id="username"><br><br>
+	<label for="otp">Last name:</label><br>
+	<input type="text" id="otp"><br><br>
+	<input type="submit" value="Submit">
+</form>
+{% endblock %}
