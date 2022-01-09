@@ -1,2 +1,5 @@
 textures/*
 .vs/*
+/__pycache__
+env/*
+villager-trade-tracker.db
