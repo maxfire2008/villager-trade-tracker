@@ -2,4 +2,4 @@ textures/*
 .vs/*
 /__pycache__
 env/*
-villager-trade-tracker.db
+villager-trade-tracker.sqlite3
