@@ -7,4 +7,8 @@ cur.execute('''CREATE TABLE villagers
 				(id, name, type, level, user)''')
 
 cur.execute('''CREATE TABLE users
-				(id, username, 2facode''')
+				(id, username, 2facode)''')
+
+con.commit()
+
+con.close()
