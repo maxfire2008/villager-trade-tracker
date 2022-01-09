@@ -7,13 +7,13 @@ con = sqlite3.connect('villager-trade-tracker.sqlite3')
 cur = con.cursor()
 
 cur.execute('''CREATE TABLE villagers
-(id, name, type, level, user);''')
+(id type UNIQUE, name, type, level, user);''')
 
 cur.execute('''CREATE TABLE users
-(id, otp, sql_privilege);''')
+(id type UNIQUE, otp, sql_privilege);''')
 
 cur.execute('''CREATE TABLE tokens
-(id, username, token);''')
+(user_id type UNIQUE, token);''')
 
 if input('''Include Testing Data?
 WARNING: POTENTIALLY DANGEROUS
