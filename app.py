@@ -24,8 +24,8 @@ def get_villager_level(level):
 
 def get_item_texture_url(name):
 	name=name.lower()
-	if name in TEXTURES["profession"]:
-		return "/static/"+TEXTURES["profession"][name.lower()]
+	if name in TEXTURES["item"]:
+		return "/static/"+TEXTURES["item"][name.lower()]
 	return "/static/textures/block/bedrock.png"
 
 def get_user(token):
@@ -99,12 +99,14 @@ FROM trades WHERE villager_id == (?);''',[villager]):
 				"given_item": row[3],
 				"given_count": row[4],
 				"lockout": row[5],
-				"xp_given": row[6]
+				"xp_given": row[6],
+				"wanted_item_texture": get_item_texture_url(row[1]),
+				"given_item_texture": get_item_texture_url(row[3])
 			})
 
 		con.commit()
 		con.close()
-		return flask.render_template('view_villager.html',user_id=user_id,trades=trades)
+		return flask.render_template('view_villager.html',user_id=user_id,trades=trades,villager_id=villager)
 	return flask.redirect("/login/?redirect="+"/view_villager/"+villager, code=302)
 
 @app.route("/qr_code/<key>/")

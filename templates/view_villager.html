@@ -1,10 +1,31 @@
-{% extends "base.html" %}
+﻿{% extends "base.html" %}
+
+{% block extrahead %}
+<style>
+	.wanted-item-image {
+		image-rendering: pixelated;
+		width: 10vmin;
+	}
+	.wanted-item-name {
+		font-size: 5vmin;
+	}
+</style>
+{% endblock %}
 
 {% block content %}
 <p>
+	<input type="hidden" name="villager_id" value="{{ villager_id }}">
 	<ul style="list-style-type: none;outline: 5px solid grey;padding:5px;">
 		{% for trade in trades %}
-		<li>{{ trade }}</li>
+		<li>
+			<img src="{{ trade["wanted_item_texture"] }}"
+				 class="wanted-item-image"
+				 title="{{ trade["wanted_item"] }}">
+			<span class="wanted-item-name">
+				{{ trade["wanted_count"] }}
+			</span>
+			
+		</li>
 		{% endfor %}
 	</ul>
 </p>

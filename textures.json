@@ -15,6 +15,7 @@
 		"weaponsmith": "mcwiki/grindstone.png"
 	},
 	"item": {
-		"emerald": 
+		"coal": "textures/item/coal.png",
+		"emerald": "textures/item/emerald.png"
 	}
 }
