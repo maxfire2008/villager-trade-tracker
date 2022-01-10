@@ -1,5 +1,8 @@
 {
 	"profession": {
 		"shepherd": "block/loom_front.png"
+	},
+	"items": {
+
 	}
 }

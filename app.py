@@ -8,13 +8,19 @@ import json
 from create_otp_qr import create_otp_qr
 
 TEXTURES = json.loads(open("textures.json","rb").read())
+TEXT_LOOKUP = json.loads(open("text.json","rb").read())
 
 def get_villager_texture_url(name):
 	name=name.lower()
-	if name in VILLAGER_TEXTURES["profession"]:
-		return "/static/textures/"+VILLAGER_TEXTURES["profession"][name.lower()]
-	else:
-		return "/static/textures/block/bedrock.png"
+	if name in TEXTURES["profession"]:
+		return "/static/textures/"+TEXTURES["profession"][name.lower()]
+	return "/static/textures/block/bedrock.png"
+
+def get_villager_level(level):
+	level=str(level)
+	if level in TEXT_LOOKUP["xp_levels"]:
+		return TEXT_LOOKUP["xp_levels"][level]
+	return "UNKNOWN"
 
 def get_user(token):
 	con = sqlite3.connect('villager-trade-tracker.sqlite3')
@@ -58,13 +64,42 @@ def list():
 				"name": row[1],
 				"type": row[2],
 				"level": row[3],
-				"texture": get_villager_texture_url(row[2])
+				"texture": get_villager_texture_url(row[2]),
+				"level_text": get_villager_level(row[3])
 			})
 
 		con.commit()
 		con.close()
 		return flask.render_template('list.html',user_id=user_id,villagers=villagers)
 	return flask.redirect("/login/?redirect="+"/list/", code=302)
+
+@app.route("/view_villager/<villager>")
+def view_villager(villager):
+	token = flask.request.cookies.get('token','')
+	user_id=get_user(token)
+	if user_id:
+		con = sqlite3.connect('villager-trade-tracker.sqlite3')
+		cur = con.cursor()
+
+		trades = []
+
+		for row in cur.execute(
+		'''SELECT id, wanted_item, wanted_count, given_item, given_count, lockout, xp_given
+FROM villagers WHERE villager_id == (?);''',[villager]):
+			trades.append({
+				"id": row[0],
+				"wanted_item": row[1],
+				"wanted_count": row[2],
+				"given_item": row[3],
+				"given_count": row[4],
+				"lockout": row[5],
+				"xp_given": row[6]
+			})
+
+		con.commit()
+		con.close()
+		return flask.render_template('list.html',user_id=user_id,villagers=villagers)
+	return flask.redirect("/login/?redirect="+"/view_villager/"+villager, code=302)
 
 @app.route("/qr_code/<key>/")
 def qr_code(key):

@@ -1,5 +1,9 @@
 {
 	"xp_levels": {
 		"1": "Novice",
+		"2": "Apprentice",
+		"3": "Journeyman",
+		"4": "Expert",
+		"5": "Master"
 	}
 }

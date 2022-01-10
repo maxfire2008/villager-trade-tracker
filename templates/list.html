@@ -2,13 +2,14 @@
 
 {% block content %}
 <p>
-	<ul style="list-style-type: none;">
+	<ul style="list-style-type: none;outline: 5px solid grey;padding:5px;">
 		{% for villager in villagers %}
-		<a href="{{ villager['id'] }}" style="font-size: 5vmin;text-decoration:none;color:black">
-			<li>
-				{{ villager['name'] }}
-				<img src="{{ villager['texture'] }}" style="image-rendering: pixelated; width: 10vmin; ">
-			</li>
+		<a href="/view_villager/{{ villager['id'] }}" style="font-size: 5vmin;text-decoration:none;color:black">
+		<li style="outline: 5px solid grey;">
+			{{ villager['name'] }}
+			<img src="{{ villager['texture'] }}" style="image-rendering: pixelated; width: 10vmin; ">
+			{{ villager['type'] }} - {{ villager['level_text'] }}
+		</li>
 		</a>
 		{% endfor %}
 	</ul>
