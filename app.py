@@ -2,6 +2,7 @@ import sqlite3
 import flask
 import secrets
 import pyotp
+import time
 
 from create_otp_qr import create_otp_qr
 
@@ -39,13 +40,15 @@ def login_submit():
 
 	totp = pyotp.TOTP(key)
 	if totp.verify(otp):
+		token_expiry = int(time.time())+(7*24*60*60)
+
 		token_generated = secrets.token_hex(32)
 
 		resp = flask.redirect("/", code=302)
-		resp.set_cookie('token', token_generated)
+		resp.set_cookie('token', token_generated, max_age=7*24*60*60)
 		cur.execute(f'''INSERT INTO tokens
-		(user_id, token) VALUES
-		('{username}', '{token_generated}');''')
+		(user_id, token, expire) VALUES
+		('{username}', '{token_generated}', {token_expiry});''')
 		con.commit()
 		con.close()
 		return resp
