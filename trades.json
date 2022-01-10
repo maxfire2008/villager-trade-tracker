@@ -1,0 +1,779 @@
+{
+	"shepherd": [
+		{
+			"item_wanted": "white_wool",
+			"quantity_wanted": 18,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 2
+		},
+		{
+			"item_wanted": "brown_wool",
+			"quantity_wanted": 18,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 2
+		},
+		{
+			"item_wanted": "black_wool",
+			"quantity_wanted": 18,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 2
+		},
+		{
+			"item_wanted": "gray_wool",
+			"quantity_wanted": 18,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 2
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 2,
+			"price_multiplier": 5,
+			"item_given": "shears",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 1
+		},
+		{
+			"item_wanted": "black_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "gray_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "lime_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "light_blue_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "white_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 10
+		},
+
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "white_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "orange_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "magenta_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "light_blue_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "yellow_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "lime_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "pink_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "gray_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "light_gray_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "cyan_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "purple_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "blue_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "brown_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "green_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "red_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "black_wool",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "white_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "orange_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "magenta_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "light_blue_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "yellow_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "lime_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "pink_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "gray_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "light_gray_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "cyan_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "purple_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "blue_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "brown_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "green_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "red_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 1,
+			"price_multiplier": 5,
+			"item_given": "black_carpet",
+			"quantity_given": 4,
+			"lockout": 16,
+			"xp_given": 5
+		},
+		{
+			"item_wanted": "red_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 20
+		},
+		{
+			"item_wanted": "light_gray_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 20
+		},
+		{
+			"item_wanted": "pink_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 20
+		},
+		{
+			"item_wanted": "yellow_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 20
+		},
+		{
+			"item_wanted": "orange_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 20
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "white_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "orange_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "magenta_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "light_blue_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "yellow_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "lime_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "pink_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "gray_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "light_gray_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "cyan_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "purple_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "blue_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "brown_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "green_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "red_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "black_bed",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 10
+		},
+		{
+			"item_wanted": "green_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 30
+		},
+		{
+			"item_wanted": "brown_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 30
+		},
+		{
+			"item_wanted": "blue_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 30
+		},
+		{
+			"item_wanted": "purple_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 30
+		},
+		{
+			"item_wanted": "cyan_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 30
+		},
+		{
+			"item_wanted": "magenta_dye",
+			"quantity_wanted": 12,
+			"price_multiplier": 5,
+			"item_given": "emerald",
+			"quantity_given": 1,
+			"lockout": 16,
+			"xp_given": 30
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "white_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "orange_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "magenta_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "light_blue_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "yellow_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "lime_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "pink_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "gray_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "light_gray_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "cyan_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "purple_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "blue_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "brown_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "green_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "red_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 3,
+			"price_multiplier": 5,
+			"item_given": "black_banner",
+			"quantity_given": 1,
+			"lockout": 12,
+			"xp_given": 15
+		},
+		{
+			"item_wanted": "emerald",
+			"quantity_wanted": 2,
+			"price_multiplier": 5,
+			"item_given": "painting",
+			"quantity_given": 3,
+			"lockout": 12,
+			"xp_given": 30
+		}
+	]
+}
