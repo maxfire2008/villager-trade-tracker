@@ -3,8 +3,11 @@ import flask
 import secrets
 import pyotp
 import time
+import json
 
 from create_otp_qr import create_otp_qr
+
+VILLAGER_TEXTURES = json.loads(open("villager_textures.json","rb").read())
 
 def get_user(token):
 	con = sqlite3.connect('villager-trade-tracker.sqlite3')
