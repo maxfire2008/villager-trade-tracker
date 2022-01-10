@@ -1,4 +1,6 @@
 # Villager Trade Tracker
+> :warning: **This webapp is work in progress**
+
 
 To use first open `.minecraft/versions/1.18.1/1.18.1.jar` in 7-ZIP or similar then
 copy the `assets/minecraft/textures` folder to `villager-trade-tracker/static/textures`
