@@ -13,7 +13,7 @@ TEXT_LOOKUP = json.loads(open("text.json","rb").read())
 def get_villager_texture_url(name):
 	name=name.lower()
 	if name in TEXTURES["profession"]:
-		return "/static/textures/"+TEXTURES["profession"][name.lower()]
+		return "/static/"+TEXTURES["profession"][name.lower()]
 	return "/static/textures/block/bedrock.png"
 
 def get_villager_level(level):
