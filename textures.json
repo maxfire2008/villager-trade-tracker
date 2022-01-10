@@ -1,5 +1,17 @@
 {
 	"profession": {
-		"shepherd": "block/loom_front.png"
+		"shepherd": "block/loom_front.png",
+		"armorer": "block/blast_furnace_front.png",
+		"butcher": "block/smoker_front.png",
+		"cartographer": "block/cartography_table_side1.png",
+		"cleric": "brewing_stand.png",
+		"farmer": "block/composter_side.png",
+		"fisherman": "block/barrel_side.png",
+		"fletcher": "block/fletching_table_front.png",
+		"leatherworker": "block/cauldron_side.png",
+		"librarian": "lectern.png",
+		"mason": "block/stonecutter_top.png",
+		"toolsmith": "block/smithing_table_front.png",
+		"weaponsmith": "grindstone.png"
 	}
 }
