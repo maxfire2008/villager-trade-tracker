@@ -4,7 +4,11 @@
 <p>
 	<ul>
 		{% for villager in villagers %}
-		<li>{{ villager }}</li>
+		<li>
+			<a href="villager['name']">
+				{{ villager['name'] }}
+			</a>
+		</li>
 		{% endfor %}
 	</ul>
 </p>
