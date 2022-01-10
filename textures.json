@@ -1,6 +1,5 @@
 {
 	"profession": {
-		"shepherd": "textures/block/loom_front.png",
 		"armorer": "textures/block/blast_furnace_front.png",
 		"butcher": "textures/block/smoker_front.png",
 		"cartographer": "textures/block/cartography_table_side1.png",
@@ -10,7 +9,8 @@
 		"fletcher": "textures/block/fletching_table_front.png",
 		"leatherworker": "textures/block/cauldron_side.png",
 		"librarian": "lectern.png",
-		"mason": "textures/block/stonecutter_top.png",
+		"mason": "stonecutter.gif",
+		"shepherd": "textures/block/loom_front.png",
 		"toolsmith": "textures/block/smithing_table_front.png",
 		"weaponsmith": "grindstone.png"
 	}

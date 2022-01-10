@@ -22,6 +22,12 @@ def get_villager_level(level):
 		return TEXT_LOOKUP["xp_levels"][level]
 	return level
 
+def get_item_texture_url(name):
+	name=name.lower()
+	if name in TEXTURES["profession"]:
+		return "/static/"+TEXTURES["profession"][name.lower()]
+	return "/static/textures/block/bedrock.png"
+
 def get_user(token):
 	con = sqlite3.connect('villager-trade-tracker.sqlite3')
 	cur = con.cursor()
@@ -84,8 +90,8 @@ def view_villager(villager):
 		trades = []
 
 		for row in cur.execute(
-		'''SELECT id, wanted_item, wanted_count, given_item, given_count, lockout, xp_given
-FROM villagers WHERE villager_id == (?);''',[villager]):
+		'''SELECT id, item_wanted, quantity_wanted, item_given, quantity_given, lockout, xp_given
+FROM trades WHERE villager_id == (?);''',[villager]):
 			trades.append({
 				"id": row[0],
 				"wanted_item": row[1],
@@ -98,7 +104,7 @@ FROM villagers WHERE villager_id == (?);''',[villager]):
 
 		con.commit()
 		con.close()
-		return flask.render_template('list.html',user_id=user_id,villagers=villagers)
+		return flask.render_template('view_villager.html',user_id=user_id,trades=trades)
 	return flask.redirect("/login/?redirect="+"/view_villager/"+villager, code=302)
 
 @app.route("/qr_code/<key>/")

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>
+	<ul style="list-style-type: none;outline: 5px solid grey;padding:5px;">
+		{% for trade in trades %}
+		<li>{{ trade }}</li>
+		{% endfor %}
+	</ul>
+</p>
+{% endblock %}

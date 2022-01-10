@@ -16,7 +16,7 @@ cur.execute('''CREATE TABLE tokens
 (user_id, token type UNIQUE, expire);''')
 
 cur.execute('''CREATE TABLE trades
-(id type UNIQUE, villager_id, item_wanted, quantity_wanted, item_given, quantity_given, lockout, xp_given);''')
+(id type UNIQUE, villager_id, item_wanted, quantity_wanted, item_given, quantity_given, lockout, xp_given, zombied_multi);''')
 
 if input('''Include Testing Data?
 WARNING: POTENTIALLY DANGEROUS
@@ -35,13 +35,21 @@ Type "CONFIRMDEVENV" to include.''') == "CONFIRMDEVENV":
 	
 	test_villagers = [
 		["TH1","Shepherd",5],
-		["TH2","Cleric",5]
+		["TH2","Cleric",5],
+		["TH3","Fisherman",4],
+		["TH4","Librarian",3],
+		["TH5","Mason",2],
+		["TH6","Fletcher",1]
 	]
 
 	for v in test_villagers:
+		cvill_id = uuid.uuid4().hex
 		cur.execute(f'''INSERT INTO villagers
 		(id, name, type, level, user, zombied) VALUES
-		('{uuid.uuid4().hex}', '{v[0]}', '{v[1]}', '{v[2]}', '{test_account_id}', 0);''')
+		('{cvill_id}', '{v[0]}', '{v[1]}', '{v[2]}', '{test_account_id}', 0);''')
+		cur.execute(f'''INSERT INTO trades
+		(id, villager_id, item_wanted, quantity_wanted, item_given, quantity_given, lockout, xp_given, zombied_multi) VALUES
+		('{uuid.uuid4().hex}', '{cvill_id}', 'Coal', 15, 'Emerald', 1, 16, 2, 5);''')
 
 con.commit()
 
