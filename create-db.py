@@ -16,7 +16,7 @@ cur.execute('''CREATE TABLE tokens
 (user_id, token type UNIQUE, expire);''')
 
 cur.execute('''CREATE TABLE trades
-(id type UNIQUE, villager_id, wanted_item, wanted_count, given_item, given_count, lockout, xp_given);''')
+(id type UNIQUE, villager_id, item_wanted, quantity_wanted, item_given, quantity_given, lockout, xp_given);''')
 
 if input('''Include Testing Data?
 WARNING: POTENTIALLY DANGEROUS
