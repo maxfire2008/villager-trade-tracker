@@ -7,7 +7,14 @@ import json
 
 from create_otp_qr import create_otp_qr
 
-VILLAGER_TEXTURES = json.loads(open("villager_textures.json","rb").read())
+TEXTURES = json.loads(open("textures.json","rb").read())
+
+def get_villager_texture_url(name):
+	name=name.lower()
+	if name in VILLAGER_TEXTURES["profession"]:
+		return "/static/textures/"+VILLAGER_TEXTURES["profession"][name.lower()]
+	else:
+		return "/static/textures/block/bedrock.png"
 
 def get_user(token):
 	con = sqlite3.connect('villager-trade-tracker.sqlite3')
@@ -50,7 +57,8 @@ def list():
 				"id": row[0],
 				"name": row[1],
 				"type": row[2],
-				"level": row[3]
+				"level": row[3],
+				"texture": get_villager_texture_url(row[2])
 			})
 
 		con.commit()
