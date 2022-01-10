@@ -1,11 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form action="/login_submit/" method="POST">
-	<label for="username">Username:</label><br>
-	<input type="text" id="username" name="username"><br><br>
-	<label for="otp">OTP:</label><br>
-	<input type="text" id="otp" name="otp"><br><br>
-	<input type="submit" value="Submit">
-</form>
+<p>
+	{% if failure %}
+		<p>Your username, password, or OTP was incorrect</p>
+	{% endif %}
+	<form action="/login_submit/" method="POST">
+		<label for="username">Username:</label><br>
+		<input type="text" id="username" name="username"><br><br>
+		<label for="password">Password:</label><br>
+		<input type="password" id="password" name="password"><br><br>
+		<label for="otp">OTP:</label><br>
+		<input type="text" id="otp" name="otp"><br><br>
+		<input type="hidden" id="redirect" name="redirect" value="{{ redirect }}">
+		<input type="submit" value="Submit">
+	</form>
+</p>
 {% endblock %}

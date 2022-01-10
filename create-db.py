@@ -26,7 +26,19 @@ Type "CONFIRMDEVENV" to include.''') == "CONFIRMDEVENV":
 	(id, password, otp, sql_privilege) VALUES
 	('{test_account_id}', '{test_account_pw}', '{test_account_otp}', TRUE);''')
 	totp = pyotp.TOTP(test_account_otp)
-	print(test_account_id,totp.provisioning_uri(issuer_name='villager-trade-tracker'))
+	print("Username:",test_account_id)
+	print("Password:",test_account_pw)
+	print("OTP:",totp.provisioning_uri(issuer_name='villager-trade-tracker'))
+	
+	test_villagers = [
+		["1","Shepherd",5],
+		["2","Cleric",5]
+	]
+
+	for v in test_villagers:
+		cur.execute(f'''INSERT INTO villagers
+		(id, name, type, level, user) VALUES
+		('{uuid.uuid4().hex}', '{v[0]}', '{v[1]}', '{v[2]}', '{test_account_id}');''')
 
 con.commit()
 

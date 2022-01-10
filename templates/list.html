@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>
+	<ul>
+		{% for villager in villagers %}
+		<li>{{ villager }}</li>
+		{% endfor %}
+	</ul>
+</p>
+{% endblock %}
