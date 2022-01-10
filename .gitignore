@@ -1,4 +1,4 @@
-textures/*
+static/textures/*
 .vs/*
 /__pycache__
 env/*
