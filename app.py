@@ -20,7 +20,7 @@ def get_villager_level(level):
 	level=str(level)
 	if level in TEXT_LOOKUP["xp_levels"]:
 		return TEXT_LOOKUP["xp_levels"][level]
-	return "UNKNOWN"
+	return level
 
 def get_user(token):
 	con = sqlite3.connect('villager-trade-tracker.sqlite3')
