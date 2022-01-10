@@ -74,7 +74,6 @@ def list():
 				"level_text": get_villager_level(row[3])
 			})
 
-		con.commit()
 		con.close()
 		return flask.render_template('list.html',user_id=user_id,villagers=villagers)
 	return flask.redirect("/login/?redirect="+"/list/", code=302)
@@ -89,24 +88,34 @@ def view_villager(villager):
 
 		trades = []
 
-		for row in cur.execute(
-		'''SELECT id, item_wanted, quantity_wanted, item_given, quantity_given, lockout, xp_given
-FROM trades WHERE villager_id == (?);''',[villager]):
-			trades.append({
+		villager_found = None
+		for row in cur.execute('SELECT id, name, type, level, user, zombied FROM villagers WHERE id == (?) AND user == (?);',[villager, user_id]):
+			villager_found = {
 				"id": row[0],
-				"wanted_item": row[1],
-				"wanted_count": row[2],
-				"given_item": row[3],
-				"given_count": row[4],
-				"lockout": row[5],
-				"xp_given": row[6],
-				"wanted_item_texture": get_item_texture_url(row[1]),
-				"given_item_texture": get_item_texture_url(row[3])
-			})
-
-		con.commit()
+				"name": row[1],
+				"type": row[2],
+				"level": row[3],
+				"zombied": row[5]
+			}
+		if villager_found:
+			for row in cur.execute(
+			'''SELECT id, item_wanted, quantity_wanted, item_given, quantity_given, lockout, xp_given
+	FROM trades WHERE villager_id == (?);''',[villager]):
+				trades.append({
+					"id": row[0],
+					"wanted_item": row[1],
+					"wanted_count": row[2],
+					"given_item": row[3],
+					"given_count": row[4],
+					"lockout": row[5],
+					"xp_given": row[6],
+					"wanted_item_texture": get_item_texture_url(row[1]),
+					"given_item_texture": get_item_texture_url(row[3])
+				})
+			return flask.render_template('view_villager.html',user_id=user_id,trades=trades,villager_found=villager_found)
+		else:
+			return "404", 404
 		con.close()
-		return flask.render_template('view_villager.html',user_id=user_id,trades=trades,villager_id=villager)
 	return flask.redirect("/login/?redirect="+"/view_villager/"+villager, code=302)
 
 @app.route("/qr_code/<key>/")

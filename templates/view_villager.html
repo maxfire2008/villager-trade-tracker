@@ -2,29 +2,53 @@
 
 {% block extrahead %}
 <style>
-	.wanted-item-image {
+	.item-image {
 		image-rendering: pixelated;
 		width: 10vmin;
 	}
-	.wanted-item-name {
+	.item-name {
 		font-size: 5vmin;
+	}
+	.right-arrow {
+		width: 7vmin;
 	}
 </style>
 {% endblock %}
 
 {% block content %}
 <p>
-	<input type="hidden" name="villager_id" value="{{ villager_id }}">
+	<form>
+		<input type="hidden" name="villager_id" value="{{ villager_id }}">
+		name, type, level, user, zombied
+		<label for="name">Name:</label><br>
+		<input type="text" name="name"><br><br>
+		<label for="type">Type:</label><br>
+		<input type="text" name="type"><br><br>
+		<label for="level">Level:</label><br>
+		<select name="level">
+			<option value="1">1. Novice</option>
+			<option value="2">2. Apprentice</option>
+			<option value="3">3. Journeyman</option>
+			<option value="4">4. Expert</option>
+			<option value="5">5. Master</option>
+		</select>
+	</form>
 	<ul style="list-style-type: none;outline: 5px solid grey;padding:5px;">
 		{% for trade in trades %}
 		<li>
 			<img src="{{ trade["wanted_item_texture"] }}"
-				 class="wanted-item-image"
+				 class="item-image"
 				 title="{{ trade["wanted_item"] }}">
-			<span class="wanted-item-name">
+			<span class="item-name">
 				{{ trade["wanted_count"] }}
 			</span>
-			
+			<img src="/static/arrow_right.svg" class="right-arrow">
+			<img src="{{ trade["given_item_texture"] }}"
+				 class="item-image"
+				 title="{{ trade["given_item"] }}">
+			<span class="item-name">
+				{{ trade["given_count"] }}
+			</span>
 		</li>
 		{% endfor %}
 	</ul>

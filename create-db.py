@@ -51,6 +51,18 @@ Type "CONFIRMDEVENV" to include.''') == "CONFIRMDEVENV":
 		(id, villager_id, item_wanted, quantity_wanted, item_given, quantity_given, lockout, xp_given, zombied_multi) VALUES
 		('{uuid.uuid4().hex}', '{cvill_id}', 'Coal', 15, 'Emerald', 1, 16, 2, 5);''')
 
+	print('Creating Eve')
+	test_account_id = 'aaf08af36f8643db81fc040d09f78ebe'
+	test_account_pw = '12345678'
+	test_account_otp = 'ZUPGKLOFUE3G7NZV4VTHBRVYYCY4Y36N'
+	cur.execute(f'''INSERT INTO users
+	(id, password, otp, sql_privilege) VALUES
+	('{test_account_id}', '{test_account_pw}', '{test_account_otp}', TRUE);''')
+	totp = pyotp.TOTP(test_account_otp)
+	print("Eve Username:",test_account_id)
+	print("Eve Password:",test_account_pw)
+	print("Eve OTP:",totp.provisioning_uri(issuer_name='villager-trade-tracker'))
+
 con.commit()
 
 con.close()
