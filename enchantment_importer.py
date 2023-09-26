@@ -1,4 +1,4 @@
-table_file = input("Input table txt file from https://minecraft.fandom.com/wiki/Enchanting#Summary_of_enchantments\n>")
+table_file = input("Input table txt file from https://minecraft.wiki/w/Enchanting#Summary_of_enchantments\n>")
 table = open(table_file).read()
 
 roman_numerals = {
